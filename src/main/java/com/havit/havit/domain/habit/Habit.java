@@ -1,5 +1,6 @@
 package com.havit.havit.domain.habit;
 
+import com.havit.havit.domain.BaseTimeEntity;
 import com.havit.havit.domain.user.User;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,7 +23,7 @@ import org.hibernate.annotations.DynamicInsert;
 @Getter
 @DynamicInsert
 @NoArgsConstructor
-public class Habit {
+public class Habit extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "habit_id", nullable = false)
