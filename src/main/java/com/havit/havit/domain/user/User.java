@@ -1,5 +1,6 @@
 package com.havit.havit.domain.user;
 
+import com.havit.havit.domain.BaseTimeEntity;
 import com.havit.havit.domain.habit.Habit;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,7 @@ import org.hibernate.annotations.DynamicInsert;
 @DynamicInsert
 @Table(name = "user")
 @NoArgsConstructor
-public class User {
+public class User extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id", nullable = false)
